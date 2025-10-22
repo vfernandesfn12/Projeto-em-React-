@@ -67,13 +67,13 @@ const BarraNavegacao = () => {
                 <Nav.Link
                   as={NavLink}
                   to="/produtos"
-                  className="text-while ps-4">
+                  className="text-white ps-4">
                   <BsBoxes className="fs-5" />
                   <span className="ms-2">Listar</span>
                 </Nav.Link>
                 {/* Opção 2 */}
                 <Nav.Link as={NavLink} to="/produtos/cadastrar"
-                                           className="text-while ps-4">
+                                           className="text-white ps-4">
                 <BsBoxes className="fs-5" />
                 <span className="ms-2">Adicionar</span>
                 </Nav.Link>
