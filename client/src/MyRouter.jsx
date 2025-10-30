@@ -6,6 +6,11 @@ import Login from "./pages/Login.jsx"
 import RotasProtegidas from "././pages/RotasProtegidas.jsx"
 import Home from "./pages/Home.jsx"
 
+//Impotação páginas produto
+import VerProdutos from "./pages/Produtos/VerProdutos.jsx"
+import CadastrarProduto from "./pages/Produtos/CadastrarProduto.jsx";
+import EditarProduto from "./pages/Produtos/EditarProduto.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +36,23 @@ const router = createBrowserRouter([
         {
             path: "home",
             element: <Home />
+        },
+        {
+          path: "produtos",
+          children:[
+            {
+              index: true,
+              element: <VerProdutos />
+            },
+            {
+              path: "cadastrar",
+              element: <CadastrarProduto />
+            },
+            {
+              path: "editar/:id",
+              element: <EditarProduto />
+            },
+          ]
         }
     ]
   }

@@ -1,71 +1,90 @@
 {
-    "usuarios": [
-        {
-            "id": 1,
-            "nome": "Gregory",
-            "email": "gregory@gmail.com",
-            "senha": "5",
-            "tipo": "Administrador",
-            "imagemUrl": "https://observatoriodocinema.com.br/wp-content/uploads/2021/12/greg-todo-mund-odeia.jpg"
-        },
-        {
-            "id": 2,
-            "nome": "Cristiano",
-            "email": "cristiano@gmail.com",
-            "senha": "7",
-            "tipo": "Gerente",
-            "imagemUrl": "https://conteudo.imguol.com.br/c/esporte/d6/2025/04/05/cristiano-ronaldo-durante-jogo-entre-al-hilal-e-al-nassr-no-campeonato-saudita-1743855177331_v2_450x450.jpg"
-        },
-        {
-            "id": 3,
-            "nome": "Goku",
-            "email": "goku@gmail.com",
-            "senha": "3",
-            "tipo": "Funcionário",
-            "imagemUrl": null
-        }
-    ],
-    "produtos":[
-        {
-            "id": 1,
-            "SKU": "0123456789",
-            "nome": "Shampoo CR7",
-            "descricao": "Anticaspa, shampoo dos vencedores",
-            "categoria": "Saúde e Beleza",
-            "marca": "Clear men",
-            "medida": "mL",
-            "tamanho": 400,
-            "precoCusto": 0,
-            "precoVenda": 0,
-            "quantidade": 7,
-            "fornecedor": "Ambev",
-            "imagemUrl": "https://assets.unileversolutions.com/v1/1207153.jpg"
-        }
-    ],
-    "categorias":[
-        {
-            "id": 1,
-            "nome": "Saúde e Beleza"
-        }
-    ],
-    "clientes":[
-        {
-            "id": 1,
-            "nome": "Maria das Graças",
-            "email": "maria@gmail.com",
-            "documento": "12345678910",
-            "tipo": "PF",
-            "telefone": "27970707070",
-            "dataNascimento": "2007-07-07",
-            "endereco": {
-                "cep": "23456123",
-                "logradouro": "Rua dos bobos",
-                "complemento": "número 1",
-                "bairro": "Terra do nunca",
-                "cidade": "Ilha da magia",
-                "uf": "SP"
-            },
-            "status": "Ativo"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Gregory",
+      "email": "gregory@gmail.com",
+      "senha": "5",
+      "tipo": "Administrador",
+      "imagemUrl": "https://observatoriodocinema.com.br/wp-content/uploads/2021/12/greg-todo-mund-odeia.jpg"
+    },
+    {
+      "id": "2",
+      "nome": "Cristiano",
+      "email": "cristiano@gmail.com",
+      "senha": "7",
+      "tipo": "Gerente",
+      "imagemUrl": "https://conteudo.imguol.com.br/c/esporte/d6/2025/04/05/cristiano-ronaldo-durante-jogo-entre-al-hilal-e-al-nassr-no-campeonato-saudita-1743855177331_v2_450x450.jpg"
+    },
+    {
+      "id": "3",
+      "nome": "Goku",
+      "email": "goku@gmail.com",
+      "senha": "3",
+      "tipo": "Funcionário",
+      "imagemUrl": null
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "SKU": "0123456789",
+      "nome": "Shampoo CR7",
+      "descricao": "Anticaspa, shampoo dos vencedores",
+      "categoria": "Saúde e Beleza",
+      "marca": "Clear men",
+      "medida": "mL",
+      "tamanho": 400,
+      "precoCusto": 0,
+      "precoVenda": 0,
+      "quantidade": 7,
+      "fornecedor": "Ambev",
+      "imagemUrl": "https://assets.unileversolutions.com/v1/1207153.jpg"
+    },
+    {
+      "id": "3cc6",
+      "sku": "0123456788",
+      "nome": "Arroz Branco 5Kg",
+      "descricao": "Esse produto é de comer",
+      "categoria": "Saúde e Beleza",
+      "marca": "Sepé",
+      "fornecedor": "Roça",
+      "quantidade": "8",
+      "tamanho": "49",
+      "medida": "mL",
+      "precoCusto": "7",
+      "precoVenda": "15",
+      "imagemUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1TrazFpadHAlv1yiOo0AW5YrAf6OT2kSJdA&s"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Saúde e Beleza"
+    },
+    {
+      "id": "2",
+      "nome": "Moda"
+    }
+  ],
+  "clientes": [
+    {
+      "id": "1",
+      "nome": "Maria das Graças",
+      "email": "maria@gmail.com",
+      "documento": "12345678910",
+      "tipo": "PF",
+      "telefone": "27970707070",
+      "dataNascimento": "2007-07-07",
+      "endereco": {
+        "cep": "23456123",
+        "logradouro": "Rua dos bobos",
+        "complemento": "número 1",
+        "bairro": "Terra do nunca",
+        "cidade": "Ilha da magia",
+        "uf": "SP"
+      },
+      "status": "Ativo"
+    }
+  ]
 }
