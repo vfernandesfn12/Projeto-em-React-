@@ -10,16 +10,23 @@ import Image from "react-bootstrap/Image";
 import { useForm } from "react-hook-form";
 
 //Importando o hook do produto
-import { useListaCategorias, useListaMedidas, useInserirProduto } from "../../hooks/useProdutos";
+import { useListaCategorias, useListaMedidas, useInserirProduto, useBuscarProdutoPorId, useAtualizarProduto } from "../../hooks/useProdutos";
+
+//Navigate - transitar entre páginas, params - pegar o id fornecido na url
+import { useNavigate, useParams } from "react-router-dom";
+
+//Usestate - monitorar váriaveis e useffect pra realizar algo quando o componente carregar
+import { useState, useEffect } from "react";
 
 const FormularioProduto = (props) => {
 
   // Importação das funções vindas do hook useprodutos
   //Usando a função de inserir produto
-
   const { inserirProduto } = useInserirProduto()
 
-
+  //Usando a função de buscar produto e atualizar 
+  const { buscarProdutoPorId } = useBuscarProdutoPorId();
+  const { atualizarProduto } = useAtualizarProduto();
 
 
   // register = cria um objeto com os valores retirados dos inputs
@@ -43,6 +50,21 @@ const FormularioProduto = (props) => {
 
   //Variável para armazenar o link da imagem, vindo do input
   const imagemAtual = watch("imagemUrl")
+
+  // CASO O FORMULÁRIO SEJA DE EDIÇÃO, BUSCAR O PRODUTO ID
+
+  if(props.page === "editar"){
+    const [carregado, setCarregado] = useState()
+  
+    // Effect pra buscar o produto assim que o componente for montado
+    useEffect(() => {
+
+      async function fetchProduto(){
+
+      }
+      fetchProduto()
+    },[])
+  }
 
   //Funções que lidam com o sucesso ou erro do formulário
   //Função pra caso dê certo na validação do formulário

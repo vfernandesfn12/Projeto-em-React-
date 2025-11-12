@@ -26,35 +26,20 @@
     }
   ],
   "produtos": [
-    {
+     {
       "id": "1",
-      "SKU": "0123456789",
-      "nome": "Shampoo CR7",
-      "descricao": "Anticaspa, shampoo dos vencedores",
+      "nome": "Café",
+      "sku": "cnasjkcnao",
+      "descricao": "Café cafu",
       "categoria": "Saúde e Beleza",
-      "marca": "Clear men",
-      "medida": "mL",
-      "tamanho": 400,
-      "precoCusto": 0,
-      "precoVenda": 0,
-      "quantidade": 7,
-      "fornecedor": "Ambev",
-      "imagemUrl": "https://assets.unileversolutions.com/v1/1207153.jpg"
-    },
-    {
-      "id": "3cc6",
-      "sku": "0123456788",
-      "nome": "Arroz Branco 5Kg",
-      "descricao": "Esse produto é de comer",
-      "categoria": "Saúde e Beleza",
-      "marca": "Sepé",
-      "fornecedor": "Roça",
-      "quantidade": "8",
-      "tamanho": "49",
-      "medida": "mL",
-      "precoCusto": "7",
-      "precoVenda": "15",
-      "imagemUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1TrazFpadHAlv1yiOo0AW5YrAf6OT2kSJdA&s"
+      "marca": "Cafuso",
+      "fornecedor": "Cafu",
+      "quantidade": "7",
+      "tamanho": "7",
+      "medida": "Kg",
+      "precoCusto": "70",
+      "precoVenda": "76.5",
+      "imagemUrl": "https://uploads.metroimg.com/wp-content/uploads/2023/01/03150942/WhatsApp-Image-2023-01-03-at-15.09.13.jpeg"
     }
   ],
   "categorias": [

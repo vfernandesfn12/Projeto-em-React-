@@ -2,7 +2,7 @@
 const url = "http://localhost:5000";
 
 //Importando o hook de useState para controlar as variáveis
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, use } from "react";
 
 export function useListaCategorias() {
   //Váriavel para armazenar as categorias
@@ -53,4 +53,74 @@ export function useInserirProduto(){
     }
 
     return {inserirProduto}
+}
+
+// R
+export function useListaProdutos() {
+  //Lista de produtos
+  const [produtos, setProdutos] = useState([]);
+
+  //UseEffect pra puxar os dados da API assim que o componente é renderizado
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const req = await fetch(`${url}/produtos`);
+        const res = await req.json();
+        setProdutos(res)
+      }
+      catch (erro) {
+        console.log(erro.message);
+      }
+    }
+    fetchData()
+  }, []);
+
+  //Retornar a lista de produtos
+  return produtos;
+}
+
+// D - Deletar
+export function useDeletarProduto() {
+
+  //Função para deletar produto
+  const deletarProduto = async (idProduto) => {
+    const req = await fetch(`${url}/produtos/${idProduto}`, {
+      method: "DELETE"
+    })
+    const res = await req.json()
+    return res
+  }
+  return {deletarProduto}
+}
+
+// U - Atualizar
+// Hook para atualizar produto
+export function useBuscarProdutoPorId(idProduto) {
+
+  //Receber o id do produto e busca as informações
+const buscarProdutoPorId = async () =>  {
+  const req = await fetch(`${url}/produtos/${idProduto}`)
+  const res = await req.json()
+  console.log("Produto encontrado:", res);
+  return res
+
+  }
+  return {buscarProdutoPorId} 
+}
+
+//Hook para atualizar produto
+export function useAtualizarProduto() {
+  //Envia os dados novos, para o produto específico
+  const atualizarProduto = async (idProduto, data) => {
+    const req = await fetch(`${url}/produtos/${idProduto}`, {
+      method: "PUT",
+      headers: {"Content-type": "application/json"},
+      body: JSON.stringify(data)
+    })
+    const res = await req.json()
+    return res
+  }
+
+  return {atualizarProduto}
+
 }
