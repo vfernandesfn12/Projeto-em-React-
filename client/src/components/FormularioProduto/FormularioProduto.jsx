@@ -61,6 +61,37 @@ const FormularioProduto = (props) => {
 
       async function fetchProduto(){
 
+        try{
+          const produto = await buscarProdutoPorId
+          (id)
+          console.log(produto)
+
+
+          // Se houver produto, reseta o formulário com os dados do produto
+          if(produto && !carregado){
+            reset({
+              nome: produto.nome,
+              descricao: produto.descricao,
+              categoria: produto.categoria,
+              imagemUrl: produto.imagemUrl,
+              precoVenda: produto.precoVenda,
+              precoCusto: produto.precoCusto,
+              marca: produto.marca,
+              tamanho: produto.tamanho,
+              medida: produto.medida,
+              sku: produto.sku,
+              quantidade: produto.quantidade,
+              fornecedor: produto.fornecedor,
+            })
+            //Evita chamadas multiplas do reset
+            setCarregado(true)
+          }
+        }
+        catch(error){
+          console.log(("Erro ao buscar produto:", error));
+          alert("Produto não encontrado")
+          Navigate("/home")
+        }
       }
       fetchProduto()
     },[])
