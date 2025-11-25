@@ -1,10 +1,10 @@
 const express = require("express");
-const router = express.Router();
-const PedidosController = require("../controllers/pedidosController");
+const router = express.Router()
 
-router.get("/", PedidosController.list);
-router.get("/:id", PedidosController.get);
-router.post("/", PedidosController.create);
-router.delete("/:id", PedidosController.remove);
+//Importação do controller
+const pedidosController = require("../controllers/pedidosController.js")
 
-module.exports = router;
+//Criando rotas
+router.get("/", pedidosController.listar)
+
+module.exports = router
